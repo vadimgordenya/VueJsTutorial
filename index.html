@@ -33,6 +33,10 @@
 		<button v-on:click="revresMessage">Обратить порядок букв в сообщении</button>
 	</div>
 
+	<div id="app-6">
+		<p>{{ message }}</p>
+		<input type="text" v-model="message">
+	</div>
 	<script src="https://unpkg.com/vue"></script>
 
 	<script>
@@ -78,6 +82,14 @@
 					this.message = this.message.split('').reverse().join('');
 				}
 			}
+		})
+
+		var app6 = new Vue({
+			el: "#app-6",
+			data: {
+				message: 'Hello Vue!'
+			}
+
 		})
 	</script>
 </body>
